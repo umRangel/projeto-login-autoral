@@ -1,62 +1,95 @@
-body
+:root
 {
-    background-image: linear-gradient(to bottom right, rgb(56, 56, 56), blue);
-    padding: 0;
-    margin: 0;
+    --borda-redonda: 10px;
+    --height-width: 350px;
 }
 
-.form-login
+*
 {
-    padding: 40px;
-    width: 250px;
+    box-sizing: border-box;
 }
 
-.form-login h1
-{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    text-align: center;
-}
-
-.form-login label
-{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-}
-
-.form-login input
-{
-    width: 250px;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-}
-
-.form-login button
-{
-    margin: 0 auto;
-    width: 35%;
-    border: none;
-    padding: 8px;
-    background-color: rgb(16, 16, 143);
-    color: white;
-    font-size: 16px;
-    font-weight: bolder;
-    display: block;
-    margin-top: 20px;
-    
-}
-
-button:hover
-{
-    cursor: pointer;
-}
-
-#login
+#principal-login
 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body
+{
+    padding: 0;
+    margin: 0; 
+    background: linear-gradient(135deg,#272727 0%,#050505 100%);
+}
+
+.bloco-login
+{
+    height: var(--height-width);
+    width: var(--height-width);
+    padding: 40px;
+    border-radius: var(--borda-redonda);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease;
+}
+
+.bloco-login:hover
+{
+    transform: scale(1.01);
+}
+
+
+.bloco-login h1
+{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.bloco-login input
+{
+    width: 100%;
+    height: 42px;
+    border: none;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.bloco-login input:focus
+{
+    outline: none;
+    border: dashed rgb(66, 66, 66);
+}
+
+.bloco-login button
+{
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+
+    font-size: 16px;
+    font-weight: bolder;
+    
+    background-color: white;
+
+    display: block;
+    border: none;
+    border-radius: var(--borda-redonda);
+    transition: 0.2s ease;
+}
+
+.bloco-login button:hover
+{
+    cursor: pointer;
+    transform: scale(1.02);
+    background-color: gray;
+}
+
+.bloco-login button:active
+{
+    transform: scale(0.98);
+    background-color: darkgray;
 }
