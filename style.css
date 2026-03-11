@@ -2,6 +2,13 @@
 {
     --borda-redonda: 10px;
     --height-width: 350px;
+    --tamanho-fonte: 14px;
+    
+    --color0: white;
+    --color1: #252525;
+    --color2: #000000;
+    --calor3: gray;
+    --color4: darkgray;
 }
 
 *
@@ -22,7 +29,7 @@ body
 {
     padding: 0;
     margin: 0; 
-    background: linear-gradient(135deg,#272727 0%,#050505 100%);
+    background: linear-gradient(135deg, var(--color1) 0%,var(--color2) 100%);
 }
 
 .bloco-login
@@ -31,7 +38,7 @@ body
     width: var(--height-width);
     padding: 40px;
     border-radius: var(--borda-redonda);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     transition: 0.2s ease;
 }
 
@@ -43,17 +50,19 @@ body
 
 .bloco-login h1
 {
-    color: white;
+    color: var(--color0);
     text-align: center;
     font-weight: 600;
 }
 
 .bloco-login input
 {
+    font-size: var(--tamanho-fonte);
     width: 100%;
     height: 42px;
     border: none;
-    margin-bottom: 10px;
+    padding: 0 10px;
+    margin-bottom: 14px;
     box-sizing: border-box;
     border-radius: 6px;
 }
@@ -61,7 +70,8 @@ body
 .bloco-login input:focus
 {
     outline: none;
-    border: dashed rgb(66, 66, 66);
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 
 .bloco-login button
@@ -73,23 +83,31 @@ body
     font-size: 16px;
     font-weight: bolder;
     
-    background-color: white;
+    background-color: var(--color0);
 
     display: block;
     border: none;
     border-radius: var(--borda-redonda);
+
     transition: 0.2s ease;
 }
 
 .bloco-login button:hover
 {
     cursor: pointer;
-    transform: scale(1.02);
-    background-color: gray;
+    border-radius: 0px;
+    background-color: var(--calor3);
 }
 
 .bloco-login button:active
 {
     transform: scale(0.98);
-    background-color: darkgray;
+    background-color: var(--color4);
+}
+
+.bloco-login input::placeholder
+{
+    color: var(--calor3);
+    font-size: var(--tamanho-fonte);
+    font-style: italic;
 }
